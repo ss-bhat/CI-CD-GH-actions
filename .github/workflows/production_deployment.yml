@@ -46,7 +46,7 @@ jobs:
   deploy_staging:
     runs-on: ubuntu-latest
     name: "Deploy AMI to staging"
-    needs: [build]
+    needs: [test, build]
     steps:
       - run: echo "This is test"
   qa_approval:
