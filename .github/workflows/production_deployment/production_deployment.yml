@@ -1,0 +1,11 @@
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Deployment Branch'
+        type: environment
+        required: true
+      hotfix:
+        description: 'Hotfix Deployment'
+        required: false
+        type: boolean
