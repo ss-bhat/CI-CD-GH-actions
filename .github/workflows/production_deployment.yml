@@ -52,13 +52,13 @@ jobs:
   qa_approval:
     runs-on: ubuntu-latest
     name: "Waiting for QA approval"
-    needs: [build]
+    needs: [deploy_staging]
     steps:
       - run: echo "This is test"
   devops_approval:
     runs-on: ubuntu-latest
     name: "Waiting for DevOps approval"
-    needs: [build]
+    needs: [deploy_staging]
     steps:
       - run: echo "This is test"
   production_deployment:
