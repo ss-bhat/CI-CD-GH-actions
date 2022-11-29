@@ -36,7 +36,7 @@ jobs:
     name: "Run Unit Tests"
     needs: [prepare]
     steps:
-      - run: exit 1
+      - run: echo "Run tests"
   build:
     runs-on: ubuntu-latest
     name: "Build AMI"
