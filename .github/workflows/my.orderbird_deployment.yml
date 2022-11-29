@@ -3,6 +3,16 @@ name: my.orderbird Production Deployment
 on:
   workflow_dispatch:
     inputs:
+      deployment_environment:
+        description: "Default packer branch"
+        default: "dev-qa"
+        type: choice
+        options:
+          - dev-qa
+          - staging
+          - dev-ios
+          - staging
+          - production
       packer_branch:
         description: "Packer GH Branch"
         default: "master"
