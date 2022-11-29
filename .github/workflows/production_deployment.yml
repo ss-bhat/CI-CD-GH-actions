@@ -7,6 +7,15 @@ on:
         description: 'Deployment Branch'
         type: environment
         required: true
+      packer-branch:
+        description: 'Packer GH Branch'
+        default: "master"
+        type: string
+        required: False
+      packer-tag:
+        description: 'Packer GH Tag'
+        type: string
+        required: False
       hotfix:
         description: 'Hotfix Deployment'
         required: false
